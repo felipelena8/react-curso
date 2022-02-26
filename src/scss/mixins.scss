@@ -1,0 +1,14 @@
+@mixin box($width, $heigth) {
+    width: $width;
+    height: $heigth;
+}
+
+@mixin font($size:20px) {
+    font-family: $fuente;
+    font-size: $size;
+}
+
+@mixin ajustarImg() {
+    max-width: 100%;
+    max-height: 100%;
+}
