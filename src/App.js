@@ -1,9 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
-import "./css/style.css";
 import NavBar from "./componentes/NavBar";
 import "https://kit.fontawesome.com/b3e3212614.js";
 import ItemListContainer from "./componentes/ItemListContainer";
+import "./scss/style.scss";
+import Footer from "./componentes/Footer";
+import "./js/modelo.js";
+
 function App() {
   return (
     <div className="App">
@@ -11,6 +13,7 @@ function App() {
       <main>
         <ItemListContainer />
       </main>
+      <Footer />
     </div>
   );
 }

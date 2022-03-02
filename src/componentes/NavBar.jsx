@@ -1,12 +1,15 @@
 import React from "react";
-import Logo from "../images/Logo.png";
 import CartWidget from "./CartWidget";
 const navBar = () => {
   return (
     <header>
       <div className="d-flex align-items-center navUp">
         <div className="col-4">
-          <img src={Logo} alt="logo de fullgamer" className="logoHeader" />
+          <img
+            src={"/images/Logo.png"}
+            alt="logo de fullgamer"
+            className="logoHeader"
+          />
         </div>
         <div className="col-4 d-flex justify-content-center">
           <input type="text" name="" className="inputSearch" maxLength="45" />

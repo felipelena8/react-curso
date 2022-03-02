@@ -1,0 +1,38 @@
+p {
+    @include font(20px)
+}
+
+.containerFooter {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.containerRedes {
+    justify-content: space-between;
+    width: 200px;
+}
+
+.subtitulo {
+    @include font(40px);
+}
+
+.btnFooter {
+    border-top-right-radius: 0.45rem;
+    border-bottom-right-radius: 0.45rem;
+    width: 40px;
+    border: white;
+    background: #000;
+    i {
+        color: white;
+    }
+}
+
+.inputFooter {
+    border-top-left-radius: 0.45rem;
+    border-bottom-left-radius: 0.45rem;
+    outline: none;
+    @include font;
+    border: rgb(0, 0, 0) 1px solid;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
