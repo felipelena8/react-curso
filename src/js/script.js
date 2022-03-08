@@ -1,24 +1,3 @@
-class ProductoModel {
-  constructor() {
-    const productos = JSON.parse(localStorage.getItem("productos")) || [];
-    this.productos = productos.map(
-      (producto) =>
-        new Producto(
-          producto.id,
-          producto.nombre,
-          producto.precio,
-          producto.img
-        )
-    );
-  }
-  guardarProductos() {
-    localStorage.setItem("productos", JSON.stringify(this.productos));
-  }
-  agregarProducto(id, nombre, precio, img) {
-    this.productos.push(new Producto(id, nombre, precio, img));
-    this.guardarProductos();
-  }
-}
 class Producto {
   constructor(id, nombre, precio, img) {
     this.id = id;
@@ -26,62 +5,6 @@ class Producto {
     this.precio = precio;
     this.imagen = img;
   }
-}
-
-class Carro {
-  constructor() {
-    this.precio = JSON.parse(localStorage.getItem("cartPrice")) || 0;
-    this.productos = JSON.parse(localStorage.getItem("cartProductos")) || 0;
-    this.cantPorProducto =
-      JSON.parse(localStorage.getItem("cartCantProds")) || [];
-  }
-  eliminarProd(id) {
-    let prod = buscarProducto(id);
-    let indice = indiceProd(id, this.productos);
-    let countProd = this.cantPorProducto(indice);
-    this.cantPorProducto[indice] = 0;
-    this.precio += prod.precio * countProd;
-  }
-  agregarProducto(id) {
-    if (encuentraProd(id, this.productos)) {
-      let indice = indiceProd(id, this.productos);
-      this.cantPorProducto[indice]++;
-      this.precio += buscarProducto(id).precio;
-    } else {
-      this.productos.push(id);
-      this.cantPorProducto.push(1);
-      this.precio += buscarProducto(id).precio;
-    }
-  }
-}
-function buscarProducto(id) {
-  for (let prod of productos) {
-    if (prod.id == id) {
-      return prod;
-    }
-  }
-}
-
-function encuentraProd(id, listId) {
-  for (let prod of listId) {
-    if (prod == id) {
-      return true;
-    }
-  }
-  return false;
-}
-
-function indiceProd(id, listId) {
-  for (let prod of listId) {
-    if (prod == id) {
-      return listId.indexOf(id);
-    }
-  }
-}
-
-function vecesProducto(listCount, index) {
-  let count = listCount[index];
-  return count;
 }
 const productos = [
   new Producto(

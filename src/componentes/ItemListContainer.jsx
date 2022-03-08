@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import productos from "../js/modelo.js";
+import productos from "../js/script.js";
 
 export default function ItemListContainer() {
   const htmlProds = [];
@@ -15,8 +15,6 @@ export default function ItemListContainer() {
       />
     );
   }
-  console.log(htmlProds);
-
   return (
     <div className="container d-flex justify-content-around flex-wrap">
       {htmlProds}
