@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
 import productos from "../js/modelo.js";
-import { Toast } from "bootstrap";
+import ItemList from "./ItemList";
 
 const task = new Promise((resolve, reject) => {
   let condicion = true;
@@ -15,7 +14,6 @@ const task = new Promise((resolve, reject) => {
 export default function ItemListContainer() {
   const [loading, setLoading] = useState(true);
   const [prods, setProds] = useState([]);
-  const urlBase = "/images/productos/";
   useEffect(() => {
     task
       .then((resp) => setProds(resp))
@@ -39,15 +37,7 @@ export default function ItemListContainer() {
           </div>
         </div>
       ) : (
-        prods.map((prod, index) => (
-          <Card
-            key={prod.id}
-            id={prod.id}
-            nombre={prod.nombre}
-            precio={prod.precio}
-            imagen={urlBase + prod.imagen}
-          />
-        ))
+        <ItemList prods={prods}></ItemList>
       )}
     </div>
   );

@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Card(obj) {
+export default function Item(obj) {
   return (
     <div className="card">
       <div className="cardImg">
-        <img src={obj.imagen} alt="" />
+        <img src={"images/productos/" + obj.imagen} alt="" />
       </div>
       <div className="cardBody">
         <div className="price">${obj.precio}</div>
