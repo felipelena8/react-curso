@@ -9,7 +9,7 @@ export default function ItemsCount({ stock, initial }) {
     }
   };
   const decrementar = () => {
-    if (count !== 0) {
+    if (count !== initial) {
       setCount(count - 1);
     }
   };
