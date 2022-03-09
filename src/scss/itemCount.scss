@@ -1,0 +1,36 @@
+.itemCount {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 50px;
+  width: 200px;
+  .contador {
+    display: flex;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    div,
+    button {
+      width: 100%;
+      border: none;
+      text-align: center;
+      background-color: white;
+      font-weight: 500;
+    }
+    button{
+      color: rgb(86, 156, 236);
+    }
+  }
+  .addCart {
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 139, 194);
+    border-radius: 0.4rem;
+    width: 100%;
+    border: rgb(0, 139, 194) 1px solid;
+    &:hover {
+      background-color: rgb(0, 139, 194);
+      color: rgb(255, 255, 255);
+      border: 1px white solid;
+      transition: all 0.4s ease;
+    }
+  }
+}

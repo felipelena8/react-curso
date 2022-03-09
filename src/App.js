@@ -1,3 +1,4 @@
+
 import "./App.css";
 import NavBar from "./componentes/NavBar";
 import "https://kit.fontawesome.com/b3e3212614.js";
@@ -16,6 +17,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+  }
 
 export default App;
