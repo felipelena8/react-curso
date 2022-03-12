@@ -1,0 +1,14 @@
+.itemDetail {
+    justify-content: center;
+    display: inline-flex;
+    border: 2px solid black;
+    border-radius: 2rem;
+    .imageDetail {
+        padding: 3rem;
+        .img {}
+    }
+    .bodyDetail {
+        padding: 3rem;
+        border-left: 2px solid black;
+    }
+}

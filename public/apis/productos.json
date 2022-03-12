@@ -1,0 +1,224 @@
+[
+    {
+        "id": 2,
+        "nombre": "Teclado Redragon K550 Yama",
+        "precio": 7250,
+        "imagen": "Teclado-Mecanico-Redragon-YAMA-K550.jpg"
+    },
+    {
+        "id": 1,
+        "nombre": "Auriculares HyperX Cloud II",
+        "precio": 11200,
+        "imagen": "auriculares.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Procesador Intel Core I7 9700F",
+        "precio": 35000,
+        "imagen": "i7.jpg"
+    },
+    {
+        "id": 26,
+        "nombre": "GABINETE AUREOX GAMER ORION 350G TEMPLADO RGB ATX",
+        "precio": 6000,
+        "imagen": "gabinete aureox.jpg"
+    },
+    {
+        "id": 28,
+        "nombre": "Discos Solido SSD M.2 ADATA 512GB FALCON 3100MB/s",
+        "precio": 7800,
+        "imagen": "ssd falcon.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "AMD PC AMD ATHLON 3000G",
+        "precio": 35000,
+        "imagen": "pc amd.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Mouse Glorious Model D",
+        "precio": 7000,
+        "imagen": "mouse.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Placa de video NVIDIA MSI RTX 3070",
+        "precio": 300000,
+        "imagen": "3070.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Asus fuente Alimentacion 650W",
+        "precio": 18000,
+        "imagen": "fuente.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "PC ASUS ATHLON 3000G",
+        "precio": 40000,
+        "imagen": "pc asus.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Teclado Logitech G213 Prodigy RGB Gaming Inglés Internacional",
+        "precio": 4500,
+        "imagen": "teclado.jpg"
+    },
+    {
+        "id": 16,
+        "nombre": "Monitor LG 27 GAMER 27GL650F FULL HD 144HZ",
+        "precio": 55000,
+        "imagen": "monitor lg 144hz.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "PC INTEL G4930+4GB+240GB SSD",
+        "precio": 35000,
+        "imagen": "pc intel 2.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "PC INTEL I7 11700+H510+8GB+1TB",
+        "precio": 80000,
+        "imagen": "pc-intel-i7.jpg"
+    },
+    {
+        "id": 20,
+        "nombre": "MOUSE PAD HYPERX FURY S PRO SPEED EDITION XL",
+        "precio": 3400,
+        "imagen": "mousepadXLHYPERX.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Auriculares Hyperx Cloud Flight Wireless",
+        "precio": 13300,
+        "imagen": "hyperx flight.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Monitor LG LED 22MN430H-B HDMI",
+        "precio": 24000,
+        "imagen": "monitor lg.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Auriculares Logitech G935",
+        "precio": 23000,
+        "imagen": "aurisLogitech.jpg"
+    },
+    {
+        "id": 17,
+        "nombre": "Monitor 24 Gigabyte G24F gaming IPS 165HZ HDMI",
+        "precio": 49000,
+        "imagen": "monitor gigabyte 165.jpg"
+    },
+    {
+        "id": 25,
+        "nombre": "GABINETE V200 TG THERMALTAKE C/FUENTE 500W AMD EDITION",
+        "precio": 8300,
+        "imagen": "gabinete.jpg"
+    },
+    {
+        "id": 18,
+        "nombre": "Microfono Hyperx Quadcast S RGB",
+        "precio": 16000,
+        "imagen": "microfono-hyperx.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "TECLADO MECÁNICO CON RETROILUMINACIÓN G413 PARA GAMING",
+        "precio": 6700,
+        "imagen": "teclado 2.jpg"
+    },
+    {
+        "id": 19,
+        "nombre": "Microfono Trust Fyru 4IN1 Streaming Mic GXT258 USB RGB",
+        "precio": 10200,
+        "imagen": "microfono-trust.jpg"
+    },
+    {
+        "id": 22,
+        "nombre": "TECLADO Y MOUSE GAMER TRUST AZOR GXT838 ESPAÑOL GXT 838",
+        "precio": 2300,
+        "imagen": "tecladoymouse.jpg"
+    },
+    {
+        "id": 21,
+        "nombre": "MOUSEPAD TRUST GXT 758 XXL GXT758",
+        "precio": 2500,
+        "imagen": "mousepadTrust.jpg"
+    },
+    {
+        "id": 23,
+        "nombre": "TECLADO Y MOUSE CORSAIR K55 + HARPOON RGB",
+        "precio": 8000,
+        "imagen": "teclado-y-mouse-corsair-k55.jpg"
+    },
+    {
+        "id": 24,
+        "nombre": "PARLANTES GENIUS SP-HF800A",
+        "precio": 9500,
+        "imagen": "parlantes-genius.jpg"
+    },
+    {
+        "id": 27,
+        "nombre": "GABINETE RAIDMAX F05 ARGB FAN X1 VIDRIO TEMPLADO",
+        "precio": 7500,
+        "imagen": "gabinete-raidmax.jpg"
+    },
+    {
+        "id": 29,
+        "nombre": "Disco Solido SSD M.2 WD 240GB Green SN350 2400MB/s NVMe PCI-Express x4",
+        "precio": 4000,
+        "imagen": "ssd wd.jpg"
+    },
+    {
+        "id": 30,
+        "nombre": "Memoria Patriot Viper DDR4 8GB 3200MHz Steel RGB",
+        "precio": 5160,
+        "imagen": "ram patriot.jpg"
+    },
+    {
+        "id": 31,
+        "nombre": "Memoria GeiL DDR4 8GB 3000MHz Orion RGB Black",
+        "precio": 5200,
+        "imagen": "ram ceil 8gb.jpg"
+    },
+    {
+        "id": 32,
+        "nombre": "Cooler CPU Aerocool VERKHO I ",
+        "precio": 1500,
+        "imagen": "cooler aerocool.jpg"
+    },
+    {
+        "id": 33,
+        "nombre": "Cooler FAN Cooler Master MASTERFAN MF120 HALO ARGB",
+        "precio": 4200,
+        "imagen": "coolermaster.jpg"
+    },
+    {
+        "id": 37,
+        "nombre": "Mouse Logitech G903 Lightspeed Wireless Gaming 16.000dp",
+        "precio": 10200,
+        "imagen": "mouse g903.jpg"
+    },
+    {
+        "id": 35,
+        "nombre": "Mouse HyperX Pulsefire CORE RGB ",
+        "precio": 2300,
+        "imagen": "mouse hyperx pulsefire.jpg"
+    },
+    {
+        "id": 34,
+        "nombre": "Mouse Logitech G PRO Hero Gaming 16000DPI RGB",
+        "precio": 3400,
+        "imagen": "mouse gpro.jpg"
+    },
+    {
+        "id": 36,
+        "nombre": "Mouse Logitech G203 Lightsync RGB White",
+        "precio": 2300,
+        "imagen": "mouse g203.jpg"
+    }
+]

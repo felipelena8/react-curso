@@ -3,7 +3,7 @@ import React from "react";
 export default function Item(obj) {
   return (
     <div className="card">
-      <div className="cardImg">
+      <div className="cardImg" onClick={() => obj.setSelectItem(obj.id)}>
         <img src={"images/productos/" + obj.imagen} alt="" />
       </div>
       <div className="cardBody">

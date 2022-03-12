@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from "react";
-import productos from "../js/script.js";
 import ItemList from "./ItemList.jsx";
 
-const task = new Promise((resolve, reject) => {
-  let condicion = true;
-  if (condicion) {
-    setTimeout(() => resolve(productos), 2000);
-  } else {
-    reject("400 - not found");
-  }
-});
-
-export default function ItemListContainer() {
+export default function ItemListContainer({ setSelectItem }) {
   const [loading, setLoading] = useState(true);
   const [prods, setProds] = useState([]);
   useEffect(() => {
-    task
+    fetch("apis/productos.json")
+      .then((resp) => resp.json())
       .then((resp) => setProds(resp))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
@@ -36,7 +27,7 @@ export default function ItemListContainer() {
           </div>
         </div>
       ) : (
-        <ItemList prods={prods}></ItemList>
+        <ItemList prods={prods} setSelectItem={setSelectItem}></ItemList>
       )}
     </div>
   );
