@@ -22,16 +22,16 @@ const navBar = () => {
       <nav className="navbar-expand-md">
         <ul className="collapse navbar-collapse nav-container">
           <li className="nav-item">
-            <a href="">Productos</a>
+            <div href="">Productos</div>
           </li>
           <li className="nav-item">
-            <a href="">Perifericos</a>
+            <div href="">Perifericos</div>
           </li>
           <li className="nav-item">
-            <a href="">Computadoras de escritorio</a>
+            <div href="">Computadoras de escritorio</div>
           </li>
           <li className="nav-item">
-            <a href="">Cuenta</a>
+            <div href="">Cuenta</div>
           </li>
         </ul>
       </nav>
