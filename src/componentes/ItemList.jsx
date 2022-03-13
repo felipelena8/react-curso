@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 
-export default function ItemList({ prods, setSelectItem }) {
+export default function ItemList({ prods }) {
   return prods.map((prod) => (
     <Item
       key={prod.id}
@@ -9,7 +9,6 @@ export default function ItemList({ prods, setSelectItem }) {
       nombre={prod.nombre}
       precio={prod.precio}
       imagen={prod.imagen}
-      setSelectItem={setSelectItem}
     />
   ));
 }

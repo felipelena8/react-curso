@@ -1,10 +1,12 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Item(obj) {
   return (
     <div className="card">
-      <div className="cardImg" onClick={() => obj.setSelectItem(obj.id)}>
-        <img src={"images/productos/" + obj.imagen} alt="" />
+      <div className="cardImg">
+        <Link to={`/item/${obj.id}`}>
+          <img src={obj.imagen} alt="" />
+        </Link>
       </div>
       <div className="cardBody">
         <div className="price">${obj.precio}</div>

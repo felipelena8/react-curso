@@ -1,15 +1,18 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import { Link, NavLink } from "react-router-dom";
 const navBar = () => {
   return (
     <header>
       <div className="d-flex align-items-center navUp">
         <div className="col-4">
-          <img
-            src={"/images/Logo.png"}
-            alt="logo de fullgamer"
-            className="logoHeader"
-          />
+          <Link to={"/"}>
+            <img
+              src={"/images/Logo.png"}
+              alt="logo de fullgamer"
+              className="logoHeader"
+            />
+          </Link>
         </div>
         <div className="col-4 d-flex justify-content-center">
           <input type="text" name="" className="inputSearch" maxLength="45" />
@@ -22,16 +25,36 @@ const navBar = () => {
       <nav className="navbar-expand-md">
         <ul className="collapse navbar-collapse nav-container">
           <li className="nav-item">
-            <div href="">Productos</div>
+            <NavLink
+              to={"category/productos"}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              <div href="">Productos</div>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <div href="">Perifericos</div>
+            <NavLink
+              to={"category/perifericos"}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              <div href="">Perifericos</div>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <div href="">Computadoras de escritorio</div>
+            <NavLink
+              to={"category/computadoras"}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              <div href="">Computadoras de escritorio</div>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <div href="">Cuenta</div>
+            <NavLink
+              to={"cuenta"}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              <div href="">Cuenta</div>
+            </NavLink>
           </li>
         </ul>
       </nav>

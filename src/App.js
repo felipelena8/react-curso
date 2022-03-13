@@ -5,23 +5,24 @@ import "https://kit.fontawesome.com/b3e3212614.js";
 import ItemListContainer from "./componentes/ItemListContainer";
 import "./scss/style.scss";
 import Footer from "./componentes/Footer";
-import { useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ItemDetailContainer from "./componentes/ItemDetailContainer";
-
 function App() {
-  const [selectItem, setSelectItem] = useState(null);
   return (
-    <div className="App">
-      <NavBar />
-      <main>
-        {selectItem == null ? (
-          <ItemListContainer setSelectItem={setSelectItem} />
-        ) : (
-          <ItemDetailContainer id={selectItem} />
-        )}
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar />
+        <main>
+          <Routes>
+            <Route exact path="/" element={<ItemListContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/*" element={<Navigate to={"/"} />} />
+            <Route path="/category/:cat" element={<ItemListContainer />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

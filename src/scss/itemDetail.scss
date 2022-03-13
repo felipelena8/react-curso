@@ -10,5 +10,29 @@
     .bodyDetail {
         padding: 3rem;
         border-left: 2px solid black;
+        position: relative;
+        .btnComprar {
+            background-color: #fff;
+            border: 2px solid #0077f9;
+            width: 90%;
+            border-radius: 4px;
+            color: #0077f9;
+            cursor: pointer;
+            @include font(14px);
+            padding: 8px;
+            text-decoration: none;
+            transition: all ease .2s;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            &:hover {
+                background-color: #0061c9;
+                border: 2px solid #0061c9;
+                color: #fff;
+                transition: all ease .2s;
+            }
+        }
     }
 }
