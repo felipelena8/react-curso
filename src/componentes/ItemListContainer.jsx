@@ -5,18 +5,17 @@ import ItemList from "./ItemList.jsx";
 export default function ItemListContainer() {
   const [loading, setLoading] = useState(true);
   const [prods, setProds] = useState([]);
-  const { cat } = useParams() || "productos";
+  const { cat } = useParams();
   useEffect(() => {
     fetch("/apis/productos.json")
       .then((resp) => resp.json())
       .then((resp) => {
         if (cat) {
-          return resp.filter((item) => item.categoria.includes(cat));
+          setProds(resp.filter((item) => item.categoria.includes(cat)));
         } else {
-          return resp;
+          setProds(resp);
         }
       })
-      .then((resp) => setProds(resp))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, [cat]);
@@ -35,8 +34,6 @@ export default function ItemListContainer() {
             <div></div>
           </div>
         </div>
-      ) : cat ? (
-        <ItemList prods={prods}></ItemList>
       ) : (
         <ItemList prods={prods} />
       )}

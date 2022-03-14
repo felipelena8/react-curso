@@ -16,7 +16,7 @@ export default function ItemDetailContainer() {
   };
   useEffect(() => {
     getItem(id);
-  }, []);
+  }, [id]);
   return (
     <div>
       {item != null ? (

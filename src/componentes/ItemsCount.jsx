@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 export default function ItemsCount({ stock, initial }) {
   const [count, setCount] = useState(initial);
 
-  const incrementar = () => {
+  const onAdd = () => {
     if (count !== stock) {
       setCount(count + 1);
     }
@@ -20,13 +20,13 @@ export default function ItemsCount({ stock, initial }) {
           -
         </button>
         <div>{count}</div>
-        <button className="incrementar" onClick={() => incrementar()}>
+        <button className="incrementar" onClick={() => onAdd()}>
           +
         </button>
       </div>
-      <div className="col-12">
-        <button className="addCart">Agregar al carrito</button>
-      </div>
+      <button className="btn btn-outline-md btnComprar">
+        <i className="fas fa-shopping-cart"></i> Agregar
+      </button>
     </div>
   );
 }

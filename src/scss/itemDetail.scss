@@ -5,12 +5,17 @@
     border-radius: 2rem;
     .imageDetail {
         padding: 3rem;
-        .img {}
     }
     .bodyDetail {
         padding: 3rem;
         border-left: 2px solid black;
         position: relative;
+        .price {
+            @include font(25px)
+        }
+        .desc {
+            @include font(16px)
+        }
         .btnComprar {
             background-color: #fff;
             border: 2px solid #0077f9;
