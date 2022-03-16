@@ -16,6 +16,7 @@ export default function ItemDetailContainer() {
   };
   useEffect(() => {
     getItem(id);
+    window.scrollTo(0, 0);
   }, [id]);
   return (
     <div>

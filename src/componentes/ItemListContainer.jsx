@@ -18,6 +18,7 @@ export default function ItemListContainer() {
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
+      window.scrollTo(0, 0);
   }, [cat]);
   return (
     <div className="container d-flex justify-content-around flex-wrap">

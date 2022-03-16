@@ -1,5 +1,5 @@
 p {
-    @include font(20px)
+    @include font(18px)
 }
 
 .containerFooter {
@@ -13,7 +13,7 @@ p {
 }
 
 .subtitulo {
-    @include font(40px);
+    @include font(32px);
 }
 
 .btnFooter {
