@@ -1,1 +1,4 @@
 Este proyecto es un e-commerce de productos relacionados al gaming (perifericos, placas de video, procesadores, etc...). Los productos a mostrar son traidos desde un .json con fetch api, en primer lugar, se traia a los productos una sola vez utilizando useEffect y guardandolo en un estado, luego al cambiar de categoria se guardaba en otro estado los productos filtrados y se mostraban. Pero al abrir la pagina no se renderizaban los productos, por lo cual realice todo en un mismo useEffect. El home muestra todos los productos, al igual que la categoria productos.
+
+#Dependencias
+bootstrap-icons: para incluir iconos

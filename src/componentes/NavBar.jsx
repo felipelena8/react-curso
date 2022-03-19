@@ -50,10 +50,10 @@ const navBar = () => {
           </li>
           <li className="nav-item">
             <NavLink
-              to={"cart"}
+              to={"account"}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
             >
-              <div href="">Carro</div>
+              <div href="">Mi cuenta</div>
             </NavLink>
           </li>
         </ul>

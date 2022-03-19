@@ -1,0 +1,23 @@
+.container-account {
+    h4 {
+        @include font(30px);
+        margin: 20px;
+    }
+    .container-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        .account-card {
+            @extend .col-5;
+            padding: 7.5px;
+            height: 115px;
+            background: red;
+            .tittle-card {
+                @include font(20px);
+                text-align: left;
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -5,7 +5,34 @@
 'footer.scss',
 'card.scss',
 'loading.scss',
-'itemDetail.scss';
+'itemDetail.scss',
+'cuenta.scss',
+'itemCount.scss';
 main {
     margin-bottom: 40px;
+}
+
+.btn-azul {
+    background-color: #fff;
+    border: 2px solid #0077f9;
+    width: 90%;
+    border-radius: 4px;
+    color: #0077f9;
+    cursor: pointer;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    padding: 8px;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    &:hover {
+        background-color: #0061c9;
+        border: 2px solid #0061c9;
+        color: #fff;
+        transition: all ease .4s;
+    }
 }

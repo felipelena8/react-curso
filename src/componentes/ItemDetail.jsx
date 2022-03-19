@@ -1,8 +1,19 @@
 import ItemsCount from "./ItemsCount";
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+const CartBtn = () => (
+  <div className="justify-content-center d-flex">
+    <Link to={"/cart"}>
+      <button className="btn-azul">Termina tu compra</button>
+    </Link>
+  </div>
+);
 
 export default function ItemDetail({ item }) {
   const { nombre, precio, imagen, desc } = item;
+  const [value, setValue] = useState(null);
+
   return (
     <div className="container">
       <div className="itemDetail">
@@ -13,7 +24,11 @@ export default function ItemDetail({ item }) {
           <h3>{nombre}</h3>
           <p className="desc">{desc}</p>
           <p className="price">${precio}</p>
-          <ItemsCount stock={10} initial={1} />
+          {value === null ? (
+            <ItemsCount stock={10} initial={1} setValue={setValue} />
+          ) : (
+            <CartBtn />
+          )}
         </div>
       </div>
     </div>
