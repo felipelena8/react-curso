@@ -8,21 +8,28 @@ import Footer from "./componentes/Footer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import Cuenta from "./componentes/Cuenta";
+import CartContextProvider from "./context/CartContext";
+import Cart from "./componentes/Cart";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar />
-        <Routes>
-          <Route exact path="/" element={<ItemListContainer />} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="/*" element={<Navigate to={"/"} />} />
-          <Route path="/category/:cat" element={<ItemListContainer />} />
-          <Route path="/account" element={<Cuenta />} />
-          <Route path="/cart" element={<div>Futuro cart</div>} />
-        </Routes>
-        <Footer />
+        <CartContextProvider>
+          <NavBar />
+          <main>
+            <Routes>
+              <Route exact path="/" element={<ItemListContainer />} />
+              <Route path="/item/:id" element={<ItemDetailContainer />} />
+              <Route path="/*" element={<Navigate to={"/"} />} />
+              <Route path="/category/:cat" element={<ItemListContainer />} />
+              <Route path="/account" element={<Cuenta />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </CartContextProvider>
       </div>
     </BrowserRouter>
   );

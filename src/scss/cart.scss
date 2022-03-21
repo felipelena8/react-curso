@@ -1,0 +1,245 @@
+.listaCart {
+    top: 70px;
+    left: -60px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    border-radius: 0.55rem;
+    border: 2px solid black;
+    background: white;
+    -webkit-box-shadow: 26px 4px 15px 1px #000000;
+    box-shadow: 26px 4px 15px 1px #000000;
+    .cartBody {
+        .containerCartItems {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            height: 330px;
+            padding-bottom: 10px;
+            .cardCart {
+                -webkit-box-shadow: 26px 26px 15px -3px #000000;
+                box-shadow: 26px 26px 15px -3px #000000;
+                display: flex;
+                margin: 10px 10px 26px 10px;
+                background: white;
+                border-radius: 0.35rem;
+                .cardImgCart {
+                    @include box(130px, 150px);
+                    padding: 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    max-height: 200px;
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+                .cardBodyCart {
+                    border-left: 1px solid rgb(170, 168, 168);
+                    @include box(200px, 150px);
+                    padding: 5px;
+                    position: relative;
+                    .precioCart {
+                        @include font(20px)
+                    }
+                    .nombreCart {
+                        @include font(14px)
+                    }
+                    .delCardCart {
+                        @include font(16px);
+                        position: absolute;
+                        cursor: pointer;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .cartFooter {
+        border-top: 2px solid black;
+        margin-bottom: 10px;
+        .totalPrice {
+            @include font(30px);
+            padding: 10px;
+        }
+        .cartButtons {
+            margin: 10px 10px 26px 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 5px;
+            .btnCart {
+                width: 100%;
+                background-color: #fff;
+                border: 2px solid #0077f9;
+                border-radius: 4px;
+                color: #0077f9;
+                cursor: pointer;
+                font-family: "Nunito Sans", sans-serif;
+                font-size: 14px;
+                padding: 8px;
+                text-decoration: none;
+                transition: all ease 0.2s;
+                margin: auto;
+                &:hover {
+                    background-color: #0061c9;
+                    border: 2px solid #0061c9;
+                    color: #fff;
+                    transition: all ease .4s;
+                }
+            }
+        }
+    }
+}
+
+.contenedorCarro {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    flex-direction: column;
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        .contenedorCards {
+            width: 80%;
+            border-top: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            .cartBuy {
+                border-bottom: 1px solid #eaeaea;
+                height: 160px;
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+                position: relative;
+                .cartBuyImagen {
+                    height: 140px;
+                    width: 140px;
+                    position: relative;
+                    img {
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: auto;
+                        height: auto;
+                        margin: auto;
+                        max-width: 100%;
+                        max-height: 100%;
+                        position: absolute;
+                    }
+                }
+                .deleteNombre {
+                    position: relative;
+                    margin-left: 20px;
+                    .nombreCart {
+                        @include font(26px);
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                    .btnDelete {
+                        bottom: 10px;
+                        position: absolute;
+                        left: 3px;
+                        width: 100px;
+                        background-color: #fff;
+                        border: 2px solid #0077f9;
+                        border-radius: 4px;
+                        color: #0077f9;
+                        cursor: pointer;
+                        font-family: "Nunito Sans", sans-serif;
+                        font-size: 14px;
+                        padding: 8px;
+                        text-decoration: none;
+                        transition: all ease 0.2s;
+                        margin: auto;
+                        &:hover {
+                            background-color: #0061c9;
+                            border: 2px solid #0061c9;
+                            color: #fff;
+                            transition: all ease .4s;
+                        }
+                    }
+                }
+                .price {
+                    position: absolute;
+                    right: 10px;
+                    height: 140px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    div {
+                        @include font(26px);
+                    }
+                }
+            }
+        }
+    }
+    .carroFooter {
+        justify-content: center;
+        display: flex;
+        .contenedorDetalles {
+            width: 80%;
+            .cartDesc {
+                padding: 10px;
+                border-bottom: 1px solid #eaeaea;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .productos {
+                    @include font(23px);
+                    color: #0061c9;
+                    font-weight: 700px
+                }
+                .subtotal {
+                    @include font(23px);
+                    color: #0061c9;
+                    font-weight: 700px
+                }
+                .total {
+                    @include font(26px);
+                    color: #0061c9;
+                    font-weight: 700px
+                }
+                span {
+                    text-align: end;
+                    color: black;
+                    width: 140px;
+                    display: inline-block;
+                }
+            }
+            .end {
+                padding: 10px;
+                border-bottom: 1px solid #eaeaea;
+                display: flex;
+                justify-content: end;
+                .btnCart {
+                    background-color: #fff;
+                    border: 2px solid #0077f9;
+                    width: 170px;
+                    margin: 15px 0px 15px 15px;
+                    border-radius: 4px;
+                    color: #0077f9;
+                    cursor: pointer;
+                    font-family: "Nunito Sans", sans-serif;
+                    font-size: 14px;
+                    padding: 8px;
+                    text-decoration: none;
+                    transition: all ease 0.2s;
+                    &:hover {
+                        background-color: #0061c9;
+                        border: 2px solid #0061c9;
+                        color: #fff;
+                        transition: all ease .4s;
+                    }
+                }
+            }
+        }
+    }
+}

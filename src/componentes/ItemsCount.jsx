@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-export default function ItemsCount({ stock, initial, setValue }) {
+export default function ItemsCount({
+  stock,
+  initial,
+  setValue,
+  agregarCarrito,
+}) {
   const [count, setCount] = useState(initial);
 
   const onAdd = () => {
@@ -28,7 +33,10 @@ export default function ItemsCount({ stock, initial, setValue }) {
       </div>
       <button
         className="btn btn-outline-md btnComprar"
-        onClick={() => setValue(count)}
+        onClick={() => {
+          setValue(true);
+          agregarCarrito(count);
+        }}
       >
         <i className="fas fa-shopping-cart"></i> Agregar
       </button>
