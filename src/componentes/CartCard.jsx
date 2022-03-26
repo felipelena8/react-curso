@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import { useCartContext } from "../context/CartContext";
 
 export default function CartCard({ props }) {
@@ -7,7 +8,10 @@ export default function CartCard({ props }) {
   return (
     <div className="cardCart">
       <div className="cardImgCart">
+        <Link to={`item/${id}`}>
         <img src={imagen} alt="" />
+
+        </Link>
       </div>
       <div className="cardBodyCart">
         <div className="nombreCart">{nombre + ` (${cantidad})`}</div>
