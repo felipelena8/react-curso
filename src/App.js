@@ -10,7 +10,7 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import Cuenta from "./componentes/Cuenta";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./componentes/Cart";
-
+import { getFirestoreApp } from "./firebase/config";
 function App() {
   return (
     <BrowserRouter>
