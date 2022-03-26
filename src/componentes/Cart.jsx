@@ -24,13 +24,13 @@ const CardCart = ({ prod }) => {
 function Cart() {
   const { cartList, vaciarCarrito, totalPrice } = useCartContext();
   const total = totalPrice();
+  let productos = 0
   return (
     <div className="contenedorCarro">
       <div className="contenedor">
         <div className="contenedorCards">
-          {cartList.map((card) => (
-            <CardCart prod={card} key={card.id} />
-          ))}
+          {cartList.map((card) => { productos += card.cantidad; return (<CardCart prod={card} key={card.id} />) }
+          )}
         </div>
       </div>
 
@@ -38,7 +38,7 @@ function Cart() {
         <div className="contenedorDetalles">
           <div className="cartDesc">
             <div className="productos">
-              Productos <span>{cartList.length}</span>{" "}
+              Productos <span>{productos}</span>{" "}
             </div>
             <div className="subtotal">
               Subtotal <span>${total}</span>{" "}
