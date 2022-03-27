@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+import { doc, getDoc, getFirestore, collection, getDocs } from 'firebase/firestore'
 
 export default function ItemDetailContainer() {
   const { id } = useParams();
   const [item, setItem] = useState(null);
-  const getItem = (id) => {
-    fetch("/apis/productos.json")
-      .then((resp) => resp.json())
-      .then((resp) => resp.find((itemRes) => itemRes.id == id))
-      .then((resp) => {
-        setTimeout(() => setItem(resp), 2000);
-      })
-      .catch((err) => console.log(err));
-  };
+
   useEffect(() => {
-    getItem(id);
+    const db = getFirestore()
+    const queryDoc = doc(db, 'items', id)
+    getDoc(queryDoc).then(resp => setItem({ id: resp.id, ...resp.data() })) 
     window.scrollTo(0, 0);
   }, [id]);
   return (

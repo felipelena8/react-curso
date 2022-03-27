@@ -29,8 +29,11 @@ function Cart() {
     <div className="contenedorCarro">
       <div className="contenedor">
         <div className="contenedorCards">
-          {cartList.map((card) => { productos += card.cantidad; return (<CardCart prod={card} key={card.id} />) }
-          )}
+          {cartList.map((card) => {
+            productos += card.cantidad; return (
+            <CardCart prod={card} key={card.id} />
+            )
+          })}
         </div>
       </div>
 
