@@ -8,13 +8,13 @@ export default function ItemListContainer() {
   const [prods, setProds] = useState([]);
   const { cat } = useParams();
   useEffect(() => {
+    setLoading(true)
     const db = getFirestore()
     const queryCollection = collection(db, 'items')
     const queryFilter = cat ? query(queryCollection, where('categoria', 'array-contains', String(cat))) : queryCollection
-    getDocs(queryFilter).then(resp => setProds(resp.docs.map(producto => ({ id: producto.id, ...producto.data() })))).finally(setLoading(false))
+    getDocs(queryFilter).then(resp => setProds(resp.docs.map(producto => ({ id: producto.id, ...producto.data() })))).finally(setTimeout(() => setLoading(false), 500))
     window.scrollTo(0, 0);
   }, [cat]);
-  console.log(prods);
   return (
     <div className="container d-flex justify-content-around flex-wrap">
       {loading ? (

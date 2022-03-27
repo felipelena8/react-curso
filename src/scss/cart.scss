@@ -103,6 +103,28 @@ box-shadow: 0px 4px 15px 0px #000000;
     width: 100%;
     justify-content: right;
     flex-direction: column;
+    .btn{
+        margin-top: 120px;
+        background-color: #fff;
+        border: 2px solid #0077f9;
+        border-radius: 4px;
+        color: #0077f9;
+        cursor: pointer;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        padding: 8px;
+        text-decoration: none;
+        transition: all ease 0.2s;
+        bottom: 10px;
+        margin: auto;
+        &:hover {
+            background-color: #0061c9;
+            border: 2px solid #0061c9;
+            color: #fff;
+            transition: all ease .4s;
+        }
+    }
+    
     .contenedor {
         display: flex;
         justify-content: center;
@@ -241,5 +263,19 @@ box-shadow: 0px 4px 15px 0px #000000;
                 }
             }
         }
+    }
+}
+i{
+    position: relative;
+    .counterCart{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        @include font(17px)
     }
 }

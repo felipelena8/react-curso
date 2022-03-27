@@ -25,10 +25,12 @@ function CartContextProvider({ children }) {
     return prod;
   };
   const vaciarCarrito = () => {
-    setCartList([]);
+    setTimeout(() => setCartList([]), 1)
+
   };
   const removeItem = (id) => {
-    setCartList(cartList.filter((item) => item.id != id));
+    setTimeout(() => setCartList(cartList.filter((item) => item.id != id)), 1)
+
   };
   const totalPrice = () => {
     let sumaT = 0;

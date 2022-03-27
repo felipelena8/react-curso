@@ -1,6 +1,6 @@
 import React from "react";
 import { useCartContext } from "../context/CartContext";
-
+import { Link } from "react-router-dom";
 const CardCart = ({ prod }) => {
   const { removeItem } = useCartContext();
   return (
@@ -27,7 +27,7 @@ function Cart() {
   let productos = 0
   return (
     <div className="contenedorCarro">
-      <div className="contenedor">
+      {cartList.length ? <><div className="contenedor">
         <div className="contenedorCards">
           {cartList.map((card) => {
             productos += card.cantidad; return (
@@ -36,7 +36,6 @@ function Cart() {
           })}
         </div>
       </div>
-
       <div className="carroFooter">
         <div className="contenedorDetalles">
           <div className="cartDesc">
@@ -57,7 +56,11 @@ function Cart() {
             <button className="btnCart">Siguiente</button>
           </div>
         </div>
-      </div>
+        </div></> : <div>
+        <h2>No hay elementos en el carrito</h2>
+        <Link to={"/"}><button className="btn">Volver al home</button></Link>
+      </div>}
+
     </div>
   );
 }
