@@ -16,7 +16,7 @@ export default function CartCard({ props }) {
       <div className="cardBodyCart">
         <div className="nombreCart">{nombre + ` (${cantidad})`}</div>
         <div className="precioCart">${precio}</div>
-        <div className="delCardCart" onClick={() => removeItem(id)}>
+        <div className="delCardCart" id='deleteCart' onClick={() => removeItem(id)}>
           Eliminar producto
         </div>
       </div>

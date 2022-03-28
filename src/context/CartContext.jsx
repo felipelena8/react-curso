@@ -25,11 +25,11 @@ function CartContextProvider({ children }) {
     return prod;
   };
   const vaciarCarrito = () => {
-    setTimeout(() => setCartList([]), 1)
+    setCartList([])
 
   };
   const removeItem = (id) => {
-    setTimeout(() => setCartList(cartList.filter((item) => item.id != id)), 1)
+    setCartList(cartList.filter((item) => item.id != id))
 
   };
   const totalPrice = () => {
