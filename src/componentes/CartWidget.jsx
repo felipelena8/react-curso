@@ -10,12 +10,9 @@ export default function CartWidget() {
   const [mostrar, setMostrar] = useState(false);
   const total = totalPrice();
   const history = useNavigate();
-  const listaCart = document.getElementById('desplegableCarro')
 
   function clickAfuera(e) {
-    if ((cartList.length != 0) && !(['deleteCart', 'logoCart', 'vaciarCarro'].includes(e.target.id) || listaCart.contains(e.target))) {
-      setMostrar(false)
-    }
+    setMostrar(false)
   }
   useEffect(() => {
     document.addEventListener('click', clickAfuera)
@@ -25,7 +22,7 @@ export default function CartWidget() {
   })
   useEffect(() => { if (!cartList.length) setMostrar(false) }, [cartList])
   return (
-    <div className="containerCart">
+    <div className="containerCart" onClick={e => e.stopPropagation()}>
       {cartList.length ? <><i
         className="fas fa-cart-arrow-down fa-2x cart"
         onClick={() => setMostrar(!mostrar)} id={'logoCart'}
