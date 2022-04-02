@@ -13,7 +13,6 @@ export default function Footer() {
               consultasfgamer@gmail.com.ar <br />
               <a
                 href="https://api.whatsapp.com/send?phone=541167081366"
-                target="_blank"
               >
                 <i
                   className="fa fa-whatsapp"

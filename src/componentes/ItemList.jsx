@@ -9,6 +9,7 @@ export default function ItemList({ prods }) {
       nombre={prod.nombre}
       precio={prod.precio}
       imagen={prod.imagen}
+      stock={prod.stock}
     />
   ));
 }

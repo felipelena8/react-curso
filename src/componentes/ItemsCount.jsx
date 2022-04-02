@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ItemsCount({
+function ItemsCount({
   stock,
   initial,
   setValue,
@@ -30,8 +30,7 @@ export default function ItemsCount({
         <button className="incrementar" onClick={() => onAdd()}>
           <i className="fas fa-solid fa-plus"></i>
         </button>
-      </div>
-      <button
+      </div><button
         className="btn btn-outline-md btnComprar"
         onClick={() => {
           setValue(true);
@@ -43,3 +42,4 @@ export default function ItemsCount({
     </div>
   );
 }
+export default ItemsCount;

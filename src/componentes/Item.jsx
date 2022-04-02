@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 export default function Item(obj) {
-  const { addToCart } = useCartContext();
+  const { agregarAlCarro } = useCartContext();
   const agregarCarrito = () => {
-    addToCart({ ...obj, cantidad: 1 });
+    agregarAlCarro({ ...obj, cantidad: 1 });
   };
   return (
     <div className="card">

@@ -189,6 +189,7 @@ box-shadow: 0px 4px 15px 0px #000000;
                         }
                     }
                 }
+
                 .price {
                     position: absolute;
                     right: 10px;
@@ -230,7 +231,7 @@ box-shadow: 0px 4px 15px 0px #000000;
                     font-weight: 700px
                 }
                 span {
-                    text-align: end;
+                    text-align: right;
                     color: black;
                     width: 140px;
                     display: inline-block;
@@ -240,7 +241,7 @@ box-shadow: 0px 4px 15px 0px #000000;
                 padding: 10px;
                 border-bottom: 1px solid #eaeaea;
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 .btnCart {
                     background-color: #fff;
                     border: 2px solid #0077f9;
@@ -267,6 +268,7 @@ box-shadow: 0px 4px 15px 0px #000000;
 }
 i{
     position: relative;
+    cursor: pointer;
     .counterCart{
         position: absolute;
         top: -10px;

@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Cuenta() {
-  // Divs con facturas, domicilios, mis cuentas, preguntas, ultima compra etc...
   return (
     <div className="container-fluid container-account">
       <h4>Mi cuenta</h4>

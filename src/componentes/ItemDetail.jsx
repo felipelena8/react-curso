@@ -12,11 +12,11 @@ const CartBtn = () => (
 );
 
 export default function ItemDetail({ item }) {
-  const { nombre, precio, imagen, desc, id } = item;
-  const [value, setValue] = useState(null);
-  const { addToCart } = useCartContext();
+  const { nombre, precio, imagen, desc } = item;
+  const [valor, setValor] = useState(null);
+  const { agregarAlCarro } = useCartContext();
   const agregarCarrito = (cant) => {
-    addToCart({ ...item, cantidad: cant });
+    agregarAlCarro({ ...item, cantidad: cant });
   };
   return (
     <div className="container">
@@ -28,13 +28,16 @@ export default function ItemDetail({ item }) {
           <h3>{nombre}</h3>
           <p className="desc">{desc}</p>
           <p className="price">${precio}</p>
-          {value === null ? (
-            <ItemsCount
-              stock={10}
+          {valor === null ? (
+            <div style={{ marginTop: 100 + "px" }}>
+              <ItemsCount
+                stock={item.stock}
               initial={1}
-              setValue={setValue}
+                setValue={setValor}
               agregarCarrito={agregarCarrito}
             />
+            </div>
+
           ) : (
             <CartBtn />
           )}

@@ -2,15 +2,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 import CartCard from "./CartCard";
-
-
-
 export default function CartWidget() {
-  const { cartList, vaciarCarrito, totalPrice } = useCartContext();
+  const { listaCarro, vaciarCarrito, precioTotal } = useCartContext();
   const [mostrar, setMostrar] = useState(false);
-  const total = totalPrice();
+  const total = precioTotal();
   const history = useNavigate();
-
   function clickAfuera(e) {
     setMostrar(false)
   }
@@ -20,27 +16,27 @@ export default function CartWidget() {
       document.removeEventListener('click', clickAfuera)
     }
   })
-  useEffect(() => { if (!cartList.length) setMostrar(false) }, [cartList])
+  useEffect(() => { if (!listaCarro.length) setMostrar(false) }, [listaCarro])
   return (
     <div className="containerCart" onClick={e => e.stopPropagation()}>
-      {cartList.length ? <><i
+      {listaCarro.length ? <><i
         className="fas fa-cart-arrow-down fa-2x cart"
         onClick={() => setMostrar(!mostrar)} id={'logoCart'}
-      ><div className="counterCart">{cartList.length}</div></i>
+      ><div className="counterCart">{listaCarro.length}</div></i>
         <div id='desplegableCarro'
           className={
-            cartList.length && mostrar ? "listaCart" : "listaCart d-none"
+            listaCarro.length && mostrar ? "listaCart" : "listaCart d-none"
           }
         >
           <div className="cartBody">
             <div className="containerCartItems ">
-              {cartList.map((item) => (
+              {listaCarro.map((item) => (
                 <CartCard props={item} key={item.id} />
               ))}
             </div>
           </div>
           <div className="cartFooter">
-            <h4 className="totalPrice">Total: ${total}</h4>
+            <h4 className="precioTotal">Total: ${total}</h4>
             <div className="cartButtons">
               <button className="btnCart" onClick={() => history("/cart")}>
                 Finalizar compra
