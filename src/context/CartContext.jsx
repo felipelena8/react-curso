@@ -6,17 +6,20 @@ export const useCartContext = () => useContext(CartContext);
 function CartContextProvider({ children }) {
   const [listaCarro, setlistaCarro] = useState([]);
   const agregarAlCarro = (item) => {
-    let prod = seEncuentra(item.id);
-    if (prod) {
-      let indice = listaCarro.indexOf(prod);
-      let arr = [...listaCarro];
-      if (listaCarro[indice].cantidad + item.cantidad <= item.stock) {
-        arr[indice] = { ...item, cantidad: arr[indice].cantidad + item.cantidad };
+    if (item.stock >= 1) {
+      let prod = seEncuentra(item.id);
+      if (prod) {
+        let indice = listaCarro.indexOf(prod);
+        let arr = [...listaCarro];
+        if (listaCarro[indice].cantidad + item.cantidad <= item.stock) {
+          arr[indice] = { ...item, cantidad: arr[indice].cantidad + item.cantidad };
+        }
+        setlistaCarro(arr);
+      } else {
+        setlistaCarro([...listaCarro, item]);
       }
-      setlistaCarro(arr);
-    } else {
-      setlistaCarro([...listaCarro, item]);
     }
+
   };
   const seEncuentra = (id) => {
     let prod = listaCarro.find((prod) => prod.id === id);

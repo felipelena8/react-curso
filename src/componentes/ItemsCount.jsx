@@ -31,13 +31,13 @@ function ItemsCount({
           <i className="fas fa-solid fa-plus"></i>
         </button>
       </div><button
-        className="btn btn-outline-md btnComprar"
+        className="btn btn-outline-md btnComprar" disabled={stock == 0}
         onClick={() => {
           setValue(true);
           agregarCarrito(count);
         }}
       >
-        <i className="fas fa-shopping-cart"></i> Agregar
+        {stock ? <><i className="fas fa-shopping-cart"></i> Agregar</> : 'No hay stock'}
       </button>
     </div>
   );

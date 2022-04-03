@@ -9,52 +9,76 @@
     justify-content: center;
     background: rgba(0, 0, 0, 0.349);
     display: flex;
-    .form{
+    .formBox{
         background: white;
         width: 40%;
         border-radius: 1rem;
-        display: flex;
-        @include font();
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
+        
         height: 400px;
-        h3{
-            margin: 10px 0 20px 0;
-        }
-        .groupDatos{
+        form{
             display: flex;
+            @include font();
+            align-items: center;
             justify-content: space-around;
-            width: 80%;
-        margin: 10px;
-
-        }
-        .group-1, .group-2{
-            display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 200px;
-            input{
-                border-radius: 0.2rem;
+            h3{
+                margin: 10px 0 20px 0;
             }
-        }
-        .group-2{
-            .btn{
-                background-color: #fff;
-                border: 2px solid #0077f9;
-                border-radius: 4px;
-                color: #0077f9;
-                cursor: pointer;
-                font-family: "Nunito Sans", sans-serif;
-                font-size: 14px;
-                text-decoration: none;
-                transition: all ease 0.2s;
-                &:hover {
-                    background-color: #0061c9;
-                    border: 2px solid #0061c9;
-                    color: #fff;
-                    transition: all ease .4s;
+            .groupDatos{
+                display: flex;
+                justify-content: space-around;
+                width: 80%;
+            margin: 10px;
+    
+            }
+            .group-1, .group-2{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 200px;
+                input{
+                    border-radius: 0.2rem;
                 }
+            }
+            .group-2{
+                .btn{
+                    background-color: #fff;
+                    border: 2px solid #0077f9;
+                    border-radius: 4px;
+                    color: #0077f9;
+                    cursor: pointer;
+                    font-family: "Nunito Sans", sans-serif;
+                    font-size: 14px;
+                    text-decoration: none;
+                    transition: all ease 0.2s;
+                    &:hover {
+                        background-color: #0061c9;
+                        border: 2px solid #0061c9;
+                        color: #fff;
+                        transition: all ease .4s;
+                    }
+                }
+            }
+        
+        }
+        .btnCerrar{
+            margin-top: 3rem;
+            background-color: #fff;
+            border: 2px solid #0077f9;
+            border-radius: 4px;
+            color: #0077f9;
+            padding: 6px;
+            width: 130px;
+            cursor: pointer;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all ease 0.2s;
+            &:hover {
+                background-color: #0061c9;
+                border: 2px solid #0061c9;
+                color: #fff;
+                transition: all ease .4s;
             }
         }
     }

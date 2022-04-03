@@ -3,25 +3,7 @@ import { useCartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { getFirestore, collection, addDoc, query, getDocs, where, documentId, writeBatch } from "firebase/firestore"
 import FormCompra from "./FormCompra";
-const CardCart = ({ prod }) => {
-  const { removerItem } = useCartContext();
-  return (
-    <div className="cartBuy">
-      <div className="cartBuyImagen">
-        <img src={prod.imagen} alt="" />
-      </div>
-      <div className="deleteNombre">
-        <p className="nombreCart">{`${prod.nombre} (${prod.cantidad})`}</p>
-        <button className="btnDelete" onClick={() => removerItem(prod.id)}>
-          Eliminar
-        </button>
-      </div>
-      <div className="price">
-        <div>${prod.precio}</div>
-      </div>
-    </div>
-  );
-};
+import ItemCart from "./ItemCart";
 
 function Cart() {
   async function generarOrden(orden) {
@@ -39,8 +21,7 @@ function Cart() {
   const { listaCarro, vaciarCarrito, precioTotal } = useCartContext();
   const total = precioTotal();
   const items = { items: listaCarro.map(prod => { return { id: prod.id, title: prod.nombre, price: prod.precio } }), total: total }
-
-  let cantProductos = 0
+  let cantProductos = 0                 
   return (
     <>
     <div className="contenedorCarro">
@@ -48,7 +29,7 @@ function Cart() {
         <div className="contenedorCards">
             {listaCarro.map((prod) => {
               cantProductos += prod.cantidad; return (
-                <CardCart prod={prod} key={prod.id} />
+                <ItemCart prod={prod} key={prod.id} />
             )
           })}
         </div>
@@ -78,7 +59,7 @@ function Cart() {
           <Link to={"/"}><button className="btn">Volver al catalogo</button></Link>
         </div>}
     </div>
-      <FormCompra mostrar={mostrar} setMostrar={setMostrar} generarOrden={generarOrden} items={items} ordenCompra={ordenCompra} />
+      <FormCompra mostrar={mostrar} setMostrar={setMostrar} generarOrden={generarOrden} items={items} ordenCompra={ordenCompra} vaciarCarrito={vaciarCarrito} />
     </>
   );
 }
