@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 import CartCard from "./CartCard";
+
 export default function CartWidget() {
   const { listaCarro, vaciarCarrito, precioTotal } = useCartContext();
   const [mostrar, setMostrar] = useState(false);
