@@ -22,9 +22,9 @@ const navBar = () => {
           <CartWidget />
         </div>
       </div>
-      <nav className="navbar-expand-md">
-        <ul className="collapse navbar-collapse nav-container">
-          <li className="nav-item">
+      <nav >
+        <ul className="navContainer">
+          <li className="navItem">
             <NavLink
               to={"category/productos"}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -32,7 +32,7 @@ const navBar = () => {
               <div href="">Productos</div>
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li className="navItem">
             <NavLink
               to={"category/perifericos"}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -40,7 +40,7 @@ const navBar = () => {
               <div href="">Perifericos</div>
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li className="navItem">
             <NavLink
               to={"category/computadoras"}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -48,7 +48,7 @@ const navBar = () => {
               <div href="">Computadoras de escritorio</div>
             </NavLink>
           </li>
-          <li className="nav-item">
+          <li className="navItem">
             <NavLink
               to={"account"}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
