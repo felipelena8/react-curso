@@ -35,16 +35,9 @@ header {
             }
         }
         .containerCart {
-            position: relative;
-            height: 30px;
-            i {
-                position: absolute;
-                right: 370px;
-                top: 0;
-            }
+            display: flex;
+            justify-content: center;
             .listaCart {
-                position: absolute;
-                top: 40px;
                 @include box(400px, 500px);
             }
         }
