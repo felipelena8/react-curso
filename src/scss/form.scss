@@ -1,4 +1,4 @@
-.contenedorForm{
+.contenedorForm {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -9,38 +9,46 @@
     justify-content: center;
     background: rgba(0, 0, 0, 0.349);
     display: flex;
-    .formBox{
+    .formBox {
         background: white;
         width: 40%;
         border-radius: 1rem;
         height: 400px;
-        form{
+        form {
             display: flex;
             @include font();
             align-items: center;
             justify-content: space-around;
             flex-direction: column;
-            h3{
+            h3 {
                 margin: 10px 0 20px 0;
             }
-            .groupDatos{
+            .groupDatos {
                 display: flex;
                 justify-content: space-around;
                 width: 80%;
-            margin: 10px;
-    
+                margin: 10px;
             }
-            .group-1, .group-2{
+            .group-1,
+            .group-2 {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 200px;
-                input{
+                input {
                     border-radius: 0.2rem;
                 }
+                .telefono {
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                    -moz-appearance: textfield;
+                }
             }
-            .group-2{
-                .btn{
+            .group-2 {
+                .btn {
                     background-color: #fff;
                     border: 2px solid #0077f9;
                     border-radius: 4px;
@@ -58,9 +66,8 @@
                     }
                 }
             }
-        
         }
-        .btnCerrar{
+        .btnCerrar {
             margin-top: 3rem;
             background-color: #fff;
             border: 2px solid #0077f9;

@@ -30,7 +30,7 @@ function FormCompra({ mostrar, setMostrar, generarOrden, items, ordenCompra, vac
                         <div className="group-1">
                             <input type="text" placeholder='Nombre' required onChange={(e) => setNombre(e.target.value)} />
                             <input type="text" placeholder='Apellido' required onChange={(e) => setApellido(e.target.value)} />
-                            <input type="text" placeholder='Telefono' required onChange={(e) => setTelefono(e.target.value)} /></div>
+                            <input type="number" placeholder='Telefono' className='telefono' required onChange={(e) => setTelefono(e.target.value)} /></div>
                         <div className='group-2'>
                             <input type="email" placeholder='Email' id='mail-2' required onChange={(e) => { setEmail(e.target.value); if (incorrecto) setIncorrecto(false) }} style={{ background: incorrecto ? 'red' : 'white' }} />
                             <input type="email" placeholder='Confirmar email' id='mail-2' required onChange={(e) => { setConfirmacionEmail(e.target.value); if (incorrecto) setIncorrecto(false) }} style={{ background: incorrecto ? 'red' : 'white' }} />
