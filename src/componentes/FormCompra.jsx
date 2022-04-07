@@ -9,12 +9,12 @@ function FormCompra({ mostrar, setMostrar, generarOrden, items, ordenCompra, vac
             generarOrden(orden)
             setTimeout(() => setDatosEnviados(true), 500)
             vaciarCarrito();
-        } else alert('El email y el email de confirmacion deben ser iguales!')
+        } else setIncorrecto(true)
     }
     const validacionEmail = () => {
         return confirmacionEmail === email;
     }
-
+    const [incorrecto, setIncorrecto] = useState(false)
     const [datosEnviados, setDatosEnviados] = useState(false)
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
@@ -32,8 +32,8 @@ function FormCompra({ mostrar, setMostrar, generarOrden, items, ordenCompra, vac
                             <input type="text" placeholder='Apellido' required onChange={(e) => setApellido(e.target.value)} />
                             <input type="text" placeholder='Telefono' required onChange={(e) => setTelefono(e.target.value)} /></div>
                         <div className='group-2'>
-                            <input type="email" placeholder='Email' id='mail-2' required onChange={(e) => setEmail(e.target.value)} />
-                            <input type="email" placeholder='Confirmar email' id='mail-2' required onChange={(e) => setConfirmacionEmail(e.target.value)} />
+                            <input type="email" placeholder='Email' id='mail-2' required onChange={(e) => { setEmail(e.target.value); if (incorrecto) setIncorrecto(false) }} style={{ background: incorrecto ? 'red' : 'white' }} />
+                            <input type="email" placeholder='Confirmar email' id='mail-2' required onChange={(e) => { setConfirmacionEmail(e.target.value); if (incorrecto) setIncorrecto(false) }} style={{ background: incorrecto ? 'red' : 'white' }} />
                             <button type='submit' className='btn'>Enviar</button>
                         </div>
                     </div>
