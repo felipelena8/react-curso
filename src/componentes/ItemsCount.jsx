@@ -31,7 +31,7 @@ function ItemsCount({
           <i className="fas fa-solid fa-plus"></i>
         </button>
       </div><button
-        className="btn btn-outline-md btnComprar" disabled={stock == 0}
+        className="btn btn-outline-md btnComprar" disabled={stock === 0}
         onClick={() => {
           setValue(true);
           agregarCarrito(count);
