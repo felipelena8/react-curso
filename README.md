@@ -29,11 +29,11 @@ Fullgamer es un e-commerce para la venta de todos los productos orientados al ga
     
 ## Dependencias
 
-- [React](https://reactjs.org/) - JS Library
-- [Bootstrap](https://getbootstrap.com) - Para dar formato a la aplicación
-- [React-Router-Dom](https://reactrouter.com) - Para la navegación
-- [FireBase](https://firebase.google.com) - Para la persistencia de datos
-- [Sass](https://sass-lang.com) -  Para la creacion de estilos
+- [React](https://reactjs.org/) : Version 17.0.2 - JS Library
+- [Bootstrap](https://getbootstrap.com) : Version 5.1.3 - Para dar formato a la aplicación
+- [React-Router-Dom](https://reactrouter.com) : Version 17.0.2 - Para la navegación
+- [FireBase](https://firebase.google.com) : Version 9.6.10 - Para la persistencia de datos
+- [Sass](https://sass-lang.com) : Version 1.49.9 -  Para la creacion de estilos
 
 ## Autor
 
